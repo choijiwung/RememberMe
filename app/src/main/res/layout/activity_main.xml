@@ -23,14 +23,14 @@
 
             <!-- // Tab buttons -->
             <android.support.design.widget.TabLayout
-                android:id="@+id/main_tab"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/main_image"
-                app:tabGravity="center"
-                app:tabIndicatorHeight="5dp"
-                app:tabSelectedTextColor="#000000"
-                app:tabTextColor="#A9A9A9" />
+            android:id="@+id/main_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_image"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="5dp"
+            app:tabSelectedTextColor="#000000"
+            app:tabTextColor="#A9A9A9" />
 
         </RelativeLayout>
     </LinearLayout>

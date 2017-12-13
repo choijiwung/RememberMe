@@ -28,7 +28,7 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
     APINetwork network;
     Context context;
 
-    LeftMainFragment leftMainFragment;
+    LeftMainNoFragment leftMainNoFragment;
     RightMainFragment rightMainFragment;
     RightMainNoFragment rightMainNoFragment;
 
@@ -58,8 +58,8 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
 //                    rightMainFragment = new RightMainFragment();
 //                    return rightMainFragment;
 //                } else {
-                leftMainFragment = new LeftMainFragment();
-                return leftMainFragment;
+                leftMainNoFragment = new LeftMainNoFragment();
+                return leftMainNoFragment;
 
 //                }
             default:

@@ -8,9 +8,13 @@ import android.widget.LinearLayout;
 
 import rememberme.io.rememberme.R;
 
-public class RightMainActivity extends AppCompatActivity {
+/**
+ * Created by samsung on 2017-12-13.
+ */
+
+public class LeftMainActivity extends AppCompatActivity {
     RightMainFragment rightMainFragment;
-    LeftMainNoFragment leftMainNoFragment;
+    LeftMainFragment leftMainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +22,7 @@ public class RightMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_right_main);
         LinearLayout actionbar_linear = (LinearLayout) findViewById(R.id.actionbar_linear);
         rightMainFragment = new RightMainFragment();
-        leftMainNoFragment = new LeftMainNoFragment();
+        leftMainFragment = new LeftMainFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.main_container, rightMainFragment).commit();
 
         // 이제 탭버튼을 추가
@@ -36,7 +40,7 @@ public class RightMainActivity extends AppCompatActivity {
                     selected = rightMainFragment;
 
                 }else if (position == 1) {
-                    selected = leftMainNoFragment;
+                    selected = leftMainFragment;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_container,selected).commit(); // 이미 선택되었기 때문에, replace를 사용하며, 뜻은 container 안에 선택된 selected를 넣어주라
             }
@@ -51,7 +55,4 @@ public class RightMainActivity extends AppCompatActivity {
         });
 
     }
-
-    }
-
-
+}

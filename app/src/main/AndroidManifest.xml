@@ -28,6 +28,6 @@
         <activity android:name=".Day.DayActivity" />
         <activity android:name=".Spot.SpotActivity" />
         <activity android:name=".Main.RightMainActivity"></activity>
+        <activity android:name=".Main.LeftMainActivity"></activity>
     </application>
-
 </manifest>

@@ -7,4 +7,9 @@
     android:orientation="vertical"
     tools:context="rememberme.io.rememberme.Spot.SpotActivity">
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
