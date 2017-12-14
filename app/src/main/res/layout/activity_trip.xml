@@ -16,9 +16,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="97dp">
+        android:background="@drawable/trip_background"
+        >
 
         <EditText
             android:id="@+id/container_title"
@@ -26,21 +25,33 @@
             android:layout_height="40dp"
             android:background="#813b3b3b"
             android:elegantTextHeight="true"
-            android:gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:hint="여행 제목을 입력하세요."
+            android:textColorHint="@color/colorhint"
             android:textColor="@android:color/white"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:typeface="sans" />
+            android:typeface="sans"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <LinearLayout
             android:id="@+id/container_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/container_title"
             android:layout_marginTop="11dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:gravity="left"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/container_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,18 +66,20 @@
                 android:id="@+id/container_btn_start"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5.5dp"
+                android:layout_marginLeft="3.5dp"
                 android:background="#813b3b3b"
                 android:gravity="center"
                 android:text="여행시작일"
+                android:textSize="12sp"
                 android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5.5dp"
+                android:layout_marginRight="3.5dp"
                 android:gravity="center"
                 android:text="To"
+                android:layout_marginLeft="20dp"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -78,7 +91,9 @@
                 android:background="#813b3b3b"
                 android:gravity="center"
                 android:text="여행 종료일"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_weight="0.25" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,14 +101,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/container_date"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="27dp"
-            android:orientation="vertical">
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
             <ImageView
-                android:layout_width="28dp"
+                android:layout_width="50dp"
                 android:layout_height="2dp"
+                android:layout_weight="0.05"
                 app:srcCompat="@android:color/white" />
 
             <EditText
@@ -101,9 +120,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
                 android:layout_marginTop="13dp"
+
                 android:background="#813b3b3b"
-                android:gravity="center"
-                android:hint="여행지역"
+                android:gravity="center|left"
+                android:hint="여행지역은 어디로 가나요?"
+                android:textColorHint="@color/colorhint"
                 android:textColor="@android:color/white"
                 android:textSize="18dp" />
 
@@ -114,8 +135,9 @@
                 android:layout_marginTop="15dp"
                 android:background="#813b3b3b"
                 android:elegantTextHeight="true"
-                android:gravity="center"
-                android:hint="여행에대한설명"
+                android:gravity="center|left"
+                android:hint="여행에 대한 간략한 설명을 적어주세요"
+                android:textColorHint="@color/colorhint"
                 android:textColor="@android:color/white"
                 android:textSize="18dp" />
         </LinearLayout>
@@ -123,15 +145,16 @@
 
         <Button
             android:id="@+id/container_btn_submit"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="15dp"
             android:gravity="center"
             android:text="여행등록"
+            android:textStyle="bold"
+            android:textColor="#00bbdd"
+            android:background="#e6e7e8"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="25dp" />
 

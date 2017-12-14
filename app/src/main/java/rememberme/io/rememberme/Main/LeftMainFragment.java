@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,26 +42,28 @@ public class LeftMainFragment extends Fragment {
 
         listView = (ListView) view.findViewById(R.id.listView);
 
+
+
         final ArrayList<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
 
         HashMap<String, Object> map1 = new HashMap<String, Object>();
-        map1.put("Image", R.drawable.trip1_rome);
-        map1.put("FirstLastName", "로마 콜로세움");
-        map1.put("Descriptions", "내 이름은 막시무스!");
+        map1.put("Image", R.drawable.trip1);
+        map1.put("FirstLastName", "포지타노");
+        map1.put("Descriptions", "레몬 샤베트 짱맛있음");
         map1.put("Params1", "1일차");
 
         list.add(map1);
 
         HashMap<String, Object> map2 = new HashMap<String, Object>();
-        map2.put("Image", R.drawable.trip2_firenze);
-        map2.put("FirstLastName", "피렌체  성당");
-        map2.put("Descriptions", "성스러운 기운이 느껴진다.....");
+        map2.put("Image", R.drawable.trip2);
+        map2.put("FirstLastName", "콜로세움");
+        map2.put("Descriptions", "나랑 싸우고시펑? ");
         map2.put("Params1", "2일차");
 
         list.add(map2);
 
         HashMap<String, Object> map3 = new HashMap<String, Object>();
-        map3.put("Image", R.drawable.trip3_venis);
+        map3.put("Image", R.drawable.trip3);
         map3.put("FirstLastName", "베니스강");
         map3.put("Descriptions", "베니스강을 너와 함께 걷고 싶다.");
         map3.put("Params1", "3일차");
@@ -112,7 +116,7 @@ public class LeftMainFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
-            ViewHolder holder;
+            final ViewHolder holder;
             if(convertView == null){
                 holder =new ViewHolder();
                 convertView = LayoutInflater.from(context).inflate(R.layout.list_item, null);
@@ -120,7 +124,7 @@ public class LeftMainFragment extends Fragment {
                 holder.txtFirstLastName = (TextView)convertView.findViewById(txtFirstLastName);
                 holder.txtDescription = (TextView)convertView.findViewById(R.id.txtDescription);
                 holder.txtParams1 = (TextView)convertView.findViewById(R.id.txtParams1);
-
+                holder.pinbtn = (ToggleButton)convertView.findViewById(R.id.pinbtn);
                 convertView.setTag(holder);
             }else{
                 holder = (ViewHolder)convertView.getTag();
@@ -130,7 +134,16 @@ public class LeftMainFragment extends Fragment {
             holder.txtFirstLastName.setText(data.get(position).get("FirstLastName").toString());
             holder.txtDescription.setText(data.get(position).get("Descriptions").toString());
             holder.txtParams1.setText(data.get(position).get("Params1").toString());
+            holder.pinbtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if(isChecked ==true){
 
+
+                    }else{
+                    }
+                }
+            });
 
 
             return convertView;
@@ -138,6 +151,8 @@ public class LeftMainFragment extends Fragment {
 
         class ViewHolder{
             ImageView imgIcon;
+            ToggleButton pinbtn;
+
             TextView txtFirstLastName;
             TextView txtDescription;
             TextView txtParams1;

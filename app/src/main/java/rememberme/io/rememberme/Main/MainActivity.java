@@ -5,7 +5,6 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Toast;
 
 import rememberme.io.rememberme.Network.APINetwork;
 import rememberme.io.rememberme.Network.ApplicationController;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "onResume Start", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "onResume Start", Toast.LENGTH_SHORT).show();
 //        adapter.updateLeftPage();
         adapter.updateRightPage();
         adapter.notifyDataSetChanged();

@@ -8,7 +8,7 @@
 
     <color name="colorWhite">#ffffff</color>
     <color name="colorFab">#00bbdc</color>
-
+    <color name="colorhint">#bfbfbf</color>
     <!--<color name="tapTextColor">#A9A9A9</color> &lt;!&ndash;drakgray&ndash;&gt;-->
     <!--<color name="tapTextSelectedColor">#000000</color> &lt;!&ndash;black&ndash;&gt;-->
 
