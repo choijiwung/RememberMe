@@ -2,6 +2,8 @@ package rememberme.io.rememberme.Network;
 
 import android.app.Application;
 
+import java.io.File;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -20,7 +22,7 @@ public class ApplicationController extends Application {
     public static ApplicationController getInstance() {
         return instance;
     }
-
+    public final String rootPath = new File("/storage/self/primary", "RememberMe").getAbsolutePath();
     public APINetwork getApiNetwork() {
         return network;
     }
