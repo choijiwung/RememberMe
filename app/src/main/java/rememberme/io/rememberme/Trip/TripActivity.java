@@ -83,7 +83,7 @@ public class TripActivity extends AppCompatActivity {
         if (requestCode == 1000) {
             if (resultCode == Activity.RESULT_OK) {
                 trip = (Trip) data.getSerializableExtra("trip");
-                SimpleDateFormat sdf = new SimpleDateFormat("YYYY년 MM월 dd일", Locale.KOREA);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일", Locale.KOREA);
                 String startDay = sdf.format(trip.getStart());
                 String endDay = sdf.format(trip.getEnd());
                 start.setText(startDay);

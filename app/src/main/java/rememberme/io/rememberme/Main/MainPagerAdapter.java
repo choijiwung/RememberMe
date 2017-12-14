@@ -58,8 +58,8 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
 //                    rightMainFragment = new RightMainFragment();
 //                    return rightMainFragment;
 //                } else {
-                leftMainNoFragment = new LeftMainNoFragment();
-                return leftMainNoFragment;
+                rightMainNoFragment = new RightMainNoFragment();
+                return rightMainNoFragment;
 
 //                }
             default:

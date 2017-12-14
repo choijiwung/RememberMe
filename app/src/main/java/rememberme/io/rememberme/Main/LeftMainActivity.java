@@ -12,8 +12,8 @@ import rememberme.io.rememberme.R;
  * Created by samsung on 2017-12-13.
  */
 
-public class LeftMainActivity extends AppCompatActivity {
-    RightMainFragment rightMainFragment;
+    public class LeftMainActivity extends AppCompatActivity {
+        RightMainFragment rightMainFragment;
     LeftMainFragment leftMainFragment;
 
     @Override

@@ -81,7 +81,22 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="11dp"
             android:background="@drawable/rm_btn_google" />
-
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="gone" />
+        <com.facebook.login.widget.LoginButton
+            android:layout_below="@+id/label"
+            android:visibility="gone"
+            android:id="@+id/facebook_login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
     </LinearLayout>
 
     <LinearLayout

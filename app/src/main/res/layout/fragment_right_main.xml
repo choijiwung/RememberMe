@@ -20,16 +20,17 @@
             android:layout_marginLeft="8dp"
             android:src="@drawable/gaudi"
             android:clickable="true"/>
+
         <TextView
             android:id="@+id/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가우디보러 바르셀로나"
+            android:layout_marginTop="8dp"
+            android:text="바르셀로나"
             android:textColor="#000000"
             android:textSize="25dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
         <TextView
             android:layout_width="wrap_content"
