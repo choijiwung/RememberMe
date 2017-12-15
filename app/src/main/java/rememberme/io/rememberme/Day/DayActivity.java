@@ -55,7 +55,7 @@ public class DayActivity extends AppCompatActivity {
         // 파라미터로 받은 dayListContainer(레이아웃)에 addView()메소드를 통해 itemView를 넣는다.
         dayListContainer.addView(itemView);
         TextView textView = (TextView) itemView.findViewById(R.id.tvDayInput);
-        textView.setText(h+"일차");
+        textView.setText("Day" + h);
 
         final LinearLayout dayListItemContainer = (LinearLayout) itemView.findViewById(R.id.llDAyListItemContainer);
 

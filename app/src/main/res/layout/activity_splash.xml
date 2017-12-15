@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rememberme.io.rememberme.Splash.SplashActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_marginTop="222.23dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="148.97dp"
+            android:layout_height="61.5dp"
+            android:src="@drawable/rm_splash_logo" />
+    </LinearLayout>
+
+</RelativeLayout>

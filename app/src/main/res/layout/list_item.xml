@@ -60,22 +60,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Some very long long description. Some very long long description. Some very long long description."
+            android:text=""
             android:gravity="center"
             android:textColor="#222222"
             android:textSize="14dp" />
 
         <ToggleButton
             android:id="@+id/pinbtn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="right"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:textOff=""
             android:textOn=""
-            android:background="@drawable/pin_on_btn"
-            android:backgroundTint="#00bbdc" />
+            android:background="@drawable/pin_btn" />
     </LinearLayout>
 
 </LinearLayout>

@@ -22,6 +22,7 @@ import rememberme.io.rememberme.Network.Token;
 import rememberme.io.rememberme.R;
 import rememberme.io.rememberme.Trip.Results.TIndexResult;
 import rememberme.io.rememberme.Trip.Trip;
+import rememberme.io.rememberme.Trip.TripActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -80,6 +81,15 @@ public class RightMainFragment extends Fragment {
 //        adapter = new RightMainAdapter(getContext(), arrayList);
 //        recyclerView.setAdapter(adapter);
         getTrips();
+
+        ImageView imageView2 = (ImageView) view.findViewById(R.id.imageView2);
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), TripActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
 

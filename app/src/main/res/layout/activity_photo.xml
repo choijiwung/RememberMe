@@ -5,10 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="rememberme.io.rememberme.Photo.PhotoActivity">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/photo_bucket_recycler"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="37dp"
+        android:layout_marginTop="13dp"
+        android:gravity="center"
+        android:src="@drawable/logo" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="0 개"
+        android:textColor="#000000"
+        android:textSize="16dp"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:id="@+id/listView"/>
 
 </RelativeLayout>
